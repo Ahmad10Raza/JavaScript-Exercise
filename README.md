@@ -1,4 +1,3 @@
-
 # JavaScript Exercise Repository
 
 Welcome to the JavaScript Exercise repository! This repository contains a collection of JavaScript exercises and examples to help you practice and improve your JavaScript skills.
@@ -59,7 +58,4 @@ If you'd like to contribute to this repository by adding new exercises, improvin
 
 This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-```
 
-Make sure to replace the placeholder content with information specific to your repository. Additionally, consider adding more detailed instructions, examples, or any other relevant information to help users engage with your JavaScript exercises.
-```
