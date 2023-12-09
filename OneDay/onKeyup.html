@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onkeyup Event Example</title>
+</head>
+<body>
+
+<input type="text" id="textInput" placeholder="Type something">
+
+<script>
+  // JavaScript code
+  function handleKeyUp() {
+    var inputValue = document.getElementById('textInput').value;
+    console.log('Key released! Current input value: ' + inputValue);
+  }
+
+  // Get the input element by its ID
+  var inputElement = document.getElementById('textInput');
+
+  // Attach the onkeyup event handler to the input field
+  inputElement.onkeyup = handleKeyUp;
+</script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background Color onkeyup Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<label for="colorInput">Enter a color code:</label>
+<input type="text" id="colorInput" placeholder="e.g., #ff0000" onkeyup="changeBackgroundColor()">
+
+<script>
+  // JavaScript code
+  function changeBackgroundColor() {
+    // Get the input element by its ID
+    var colorInput = document.getElementById('colorInput');
+
+    // Get the value entered by the user
+    var colorCode = colorInput.value;
+
+    // Set the body background color to the user-entered color code
+    document.body.style.backgroundColor = colorCode;
+  }
+</script>
+
+</body>
+</html>
