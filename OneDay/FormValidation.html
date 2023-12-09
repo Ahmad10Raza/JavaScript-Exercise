@@ -1,0 +1,39 @@
+<form>
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    function validateForm() {
+        // Get form input values
+        var id = document.getElementById('id').value;
+        var password = document.getElementById('password').value;
+
+        // Clear previous error messages
+        clearErrors();
+
+        // Perform validation
+        var isValid = true;
+
+        if (id === '') {
+            isValid = false;
+            document.getElementById('idError').innerText = 'ID is required';
+        }
+
+        if (password === '') {
+            isValid = false;
+            document.getElementById('passwordError').innerText = 'Password is required';
+        }
+
+        return isValid;
+    }
+
+    function clearErrors() {
+        document.getElementById('idError').innerText = '';
+        document.getElementById('passwordError').innerText = '';
+    }
