@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Format Validation</title>
+    <script>
+        function validateData() {
+            var input = document.getElementById("dataInput").value;
+            var regex = /^[A-Za-z]+$/; // Regular expression to match only alphabetic characters
+            
+            if (regex.test(input)) {
+                alert("Data format is valid!");
+            } else {
+                alert("Data format is invalid!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Data Format Validation</h1>
+    <input type="text" id="dataInput" placeholder="Enter data">
+    <button onclick="validateData()">Validate</button>
+</body>
+</html>

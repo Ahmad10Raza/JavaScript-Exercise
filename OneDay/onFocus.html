@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onfocus and onblur Events Example</title>
+  <style>
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<label for="textInput">Enter your name:</label>
+<input type="text" id="textInput" onfocus="highlightInput()" onblur="resetInputHighlight()">
+<p id="output"></p>
+
+<script>
+  // JavaScript code
+  function highlightInput() {
+    // Get the input element by its ID
+    var textInput = document.getElementById('textInput');
+
+    // Change the border color when the input gains focus
+    textInput.style.borderColor = '#4CAF50';
+  }
+
+  function resetInputHighlight() {
+    // Get the input element by its ID
+    var textInput = document.getElementById('textInput');
+
+    // Change the border color back to the default when the input loses focus
+    textInput.style.borderColor = '';
+  }
+
+  // Example: Update output paragraph on keyup event
+  document.getElementById('textInput').addEventListener('keyup', function() {
+    document.getElementById('output').textContent = 'Your name: ' + this.value;
+  });
+</script>
+
+</body>
+</html>

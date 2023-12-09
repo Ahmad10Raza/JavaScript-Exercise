@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Form Validation</title>
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["name"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var zipcode = document.forms["myForm"]["zipcode"].value;
+            var country = document.forms["myForm"]["country"].value;
+
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            if (zipcode == "") {
+                alert("Zipcode must be filled out");
+                return false;
+            }
+
+            if (country == "") {
+                alert("Country must be filled out");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Basic Form Validation</h2>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="zipcode">Zipcode:</label>
+        <input type="text" id="zipcode" name="zipcode"><br><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+ 
+
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Form Validation</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<form id="myForm" onsubmit="validateForm()">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  <span id="nameError" class="error"></span>
+
+  <br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+  <span id="emailError" class="error"></span>
+
+  <br>
+
+  <label for="zipCode">Zip Code:</label>
+  <input type="text" id="zipCode" name="zipCode">
+  <span id="zipCodeError" class="error"></span>
+
+  <br><!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form Validation</title>
+    <style>
+      .error {
+        color: red;
+      }<!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic Form Validation</title>
+        <style>
+          .error {
+            color: red;
+          }
+        </style>
+      </head>
+      <body>
+      
+      <form id="myForm" onsubmit="validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span id="nameError" class="error"></span>
+      
+        <br>
+    </style>
+  </head>
+  <body>
+  
+  <form id="myForm" onsubmit="validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <span id="nameError" class="error"></span>
+  
+    <br>
+
+  <label for="country">Country:</label>
+  <input type="text" id="country" name="country">
+  <span id="countryError" class="error"></span>
+
+  <br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  function validateForm() {
+    // Get form input values
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var zipCode = document.getElementById('zipCode').value;
+    var country = document.getElementById('country').value;
+
+    // Clear previous error messages
+    clearErrors();
+
+    // Perform validation
+    var isValid = true;
+
+    if (name === '') {
+      isValid = false;
+      document.getElementById('nameError').innerText = 'Name is required';
+    }
+
+    if (email === '') {
+      isValid = false;
+      document.getElementById('emailError').innerText = 'Email is required';
+    } else if (!validateEmail(email)) {
+      isValid = false;
+      document.getElementById('emailError').innerText = 'Invalid email format';
+    }
+
+    if (zipCode === '') {
+      isValid = false;
+      document.getElementById('zipCodeError').innerText = 'Zip Code is required';
+    }
+
+    if (country === '') {
+      isValid = false;
+      document.getElementById('countryError').innerText = 'Country is required';
+    }
+
+    // If the form is not valid, prevent submission
+    if (!isValid) {
+      event.preventDefault();
+    }
+  }
+
+  function validateEmail(email) {
+    // Basic email format validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function clearErrors() {
+    // Clear error messages
+    document.getElementById('nameError').innerText = '';
+    document.getElementById('emailError').innerText = '';
+    document.getElementById('zipCodeError').innerText = '';
+    document.getElementById('countryError').innerText = '';
+  }
+</script>
+
+</body>
+</html> -->
