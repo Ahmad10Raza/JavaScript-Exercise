@@ -14,5 +14,11 @@ function isPalindrome(str) {
   return str === str.split('').reverse().join('');
 }
 
+// function for reversing the string
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+
 // Test cases
 console.log(isPalindrome('racecar')); // true
+console.log(reverseString('hello')); // false

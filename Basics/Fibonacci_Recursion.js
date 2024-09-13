@@ -1,13 +1,15 @@
-function findFib(n){
-    if(n<=0){
-      return 0;
-    }
-    else if(n<3){
-      return 1;
-    }
-   return findFib(n-1) + findFib(n-2);
-  }
-  
+function factorial(number) { 
+
+  if (number === 0 || number === 1) { 
+
+    return 1; 
+
+  } else { 
+
+    return number * factorial(number - 1); 
+
+  } 
+} 
   console.log(findFib(5));
   // 5
   
