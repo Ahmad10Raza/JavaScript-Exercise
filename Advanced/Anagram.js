@@ -14,3 +14,6 @@ function Anagram(str1, str2) {
 const str1 = "hello";
 const str2 = "llohe";
 console.log(Anagram(str1, str2));
+
+
+
