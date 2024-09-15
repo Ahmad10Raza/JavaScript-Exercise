@@ -24,6 +24,7 @@ class LinkedList {
     // Method to insert a node at the end
     insertAtEnd(value) {
         const newNode = new Node(value);
+        // If the list is empty, then the new node will be the head
         if (!this.head) {
             this.head = newNode;
         } else {
